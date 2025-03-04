@@ -44,8 +44,11 @@ class _DownloadScreenState extends State<DownloadScreen> {
       await getDownloadDirectory();
 
       Response rep = await Dio().download(
-          "https://mobile.peoplescope.co.in:4086/Download_File.aspx?DownloadLink=PM",
-          '${directory.path}/Pravin.apk',
+          "",
+        //weblink to download apk
+        //https://mobile.Suraj.co.in:5086/Download_File.aspx?DownloadLink
+        
+          '${directory.path}/sample.apk',
           onReceiveProgress: (actualBytes, int totalBytes) {
         downloadProgressNotifier.value =
             (actualBytes / totalBytes * 100).floor();
